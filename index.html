@@ -12,25 +12,29 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Ultra&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&family=Palette+Mosaic&family=Ultra&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c6b5889541.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="src/styles.css" />
-  </head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
   <body>
       <div class="container">
           <div class="weatherApp">
-              <form class="searchForm" id="search-form">
+              <form id="search-form">
                   <div class="row">
-                      <div class="col-9">
-              <input type="search" placeholder="Search your city" id="search-input" class="form-control"/></div>
+                      <div class="col-6">
+              <input type="search" placeholder="Search your city" id="city-input" class="form-control"/></div>
               <div class="col-3">
-    <input type="submit" value="Search"  class="form-control btm btn-primary"/>     
-                   </div>           
-          <h1>
-Migdalim, Israel
+    <input type="submit" value="Search" class="form-control btm btn-primary"/>     
+                   </div> 
+       <div class="col-3"> <button id="button-location">Current Location </button></div>          
+          <h1 id=city>
+Migdalim, Isreal
           </h1>
           <ul>
-              <li id="currentDate">
+              <li id=date>
 Suterday 14:36
           </li>
           <li> suny</li>
@@ -40,9 +44,11 @@ Suterday 14:36
                    <div class="clearfix">
 <img src="img/26.png" alt="sun icon" class="weatherIcon float-left" />
 </div>
-<div class="float-left">
-    <span class="temperature" id="temperature">
-    19</span><span class="units"> <a href="#" class="celsius-link">℃</a> | <a href="#" class="fahrenheit-link">℉</a> </span>
+<div id="temperature">
+   25<span class="units"> 
+       <a herf="#" id=celsius-link>℃</a>
+       <a herf="#" id=fahrenheit-link>℉</a>
+       </span
 </div>
            </div>
            <div class="col-6">
@@ -71,34 +77,34 @@ Suterday 14:36
       <div class="row">
         <div class="col-2">
             SAT 
-        </br><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
- </br><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
+        </div><br/><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
+ <br/><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
       <div class="col-2">
           SUN 
-        </br><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
-      </br><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
+        <br/><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
+      <br/><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
       <div class="col-2">
           MAN 
-        </br><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
- </br><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
+        <br/><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
+			<br/><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
       <div class="col-2">
           TUE 
-        </br><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
- </br><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
+        <br/><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
+ <br/><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
       <div class="col-2">
           WED 
-        </br><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
- </br><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
+        <br/><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
+ <br/><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
       <div class="col-2">
           THU 
-        </br><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
-    </br><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
+        <br/><i class="fa-solid fa-2"></i><i class="fa-solid fa-4"></i>℃
+    <br/><i class="fa-solid fa-1"></i><i class="fa-solid fa-1"></i>℃</div>
     </div>
 </div>
     <footer>
         <small>Made with </small><span><i class="fa-brands fa-gratipay"></i> </span><small>by Lliach Katz</small></by></footer>
     </div>
 </div>
-<script src="src/script.js"></script>
+<script src="src/index.js"></script>
     </body>
 </html>
