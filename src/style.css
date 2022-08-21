@@ -5,7 +5,7 @@ body {
     background-color: #fff;
 }
 
-button {
+button .button-location {
     cursor: pointer;
 }
 
@@ -13,21 +13,29 @@ input {
     -webkit-appearance: none;
 }
 
+.button-location {
+    border: #7A6CC1;
+    background: #0D6EFD;
+    color: inherit;
+    display: block;
+
+}
+
 button,
 input {
-    border: #272044;
+    border: #7A6CC1;
     background: plum;
     color: inherit;
 }
 
 .container {
-    font-family: PT Mono, monospace;
+    font-family: 'Grape Nuts', cursive;
 }
 
 h1 {
     color: #202124;
     font-size: 22px;
-    line-height: 30px;
+    line-height: 26px;
     font-weight: 400;
 }
 
@@ -54,11 +62,12 @@ li {
     background-image: url(../img/background.jpg);
     background-size: cover;
 }
+}
 
-.temperature {
-    font-size: 35px;
-    font-weight: 900;
-    line-height: 5px;
+#fa-2 #fa-4 {
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 5;
 }
 
 .weatherIcon {
@@ -71,18 +80,18 @@ li {
     top: -5px;
 }
 
-.searchForm {
+.searchForm .button-location {
     margin-bottom: 15px;
 }
 
 .moreInfo {
-    text-align: center;
+    taxt text-align: center;
 }
 
 span.nextDays {
     font-weight: bold;
     text-align: center;
-    font-size: 35px;
+    font-size: 50px;
 }
 
 footer {

@@ -1,67 +1,103 @@
-function formatDate(date) {
-  let hours = date.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  let dayIndex = date.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ];
-  let day = days[dayIndex];
-
-  return `${day} ${hours}:${minutes}`;
+body {
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
 }
 
-function search(event) {
-  event.preventDefault();
-  let cityElement = document.querySelector("#city");
-  let cityInput = document.querySelector("#city-input");
-  cityElement.innerHTML = cityInput.value;
-}
-let dateElement = document.querySelector("#date");
-let currentTime = new Date();
-dateElement.innerHTML = formatDate(currentTime);
-
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
-  let currentTemp = document.querySelector("h2");
-  currentTemp.innerHTML = `${temperature}°C`;
-  let h1 = document.querySelector("h1");
-  h1.innerHTML = response.data.name;
-}
-function showPosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiKey = "217c7d93315f0291dafff5c31e0a37d2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
-}
-function getPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showPosition);
+button .button-location {
+  cursor: pointer;
 }
 
-let button = document.querySelector("#button-location");
-button.addEventListener("click", getPosition);
+input {
+  -webkit-appearance: none;
+}
+.button-location{
+  border:#7A6CC1;
+  background: #0D6EFD;
+  color: inherit;
+  display: block;
 
-function searchCity(city) {
-  let apiKey = "217c7d93315f0291dafff5c31e0a37d2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showTemperature);
+}
+button,
+input  {
+  border:#7A6CC1;
+  background: plum;
+  color: inherit;
 }
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
+.container {
+  font-family: 'Grape Nuts', cursive;
+}
+
+h1 {
+  color: #202124;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  color: #000;
+  display: block;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 16px;
+  list-style: none;
+}
+
+.weatherApp {
+  border: 2px solid grey;
+  padding: 30px;
+  margin: 15px auto;
+  max-width: 620px;
+
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+}
+}
+
+#fa-2 #fa-4 {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 5;
+}
+
+.weatherIcon {
+  height: 50px;
+  width: 50px;
+}
+
+.units {
+  position: relative;
+  top: -5px;
+}
+
+.searchForm .button-location{
+  margin-bottom: 15px;
+}
+
+.moreInfo {
+  taxt text-align: center;
+}
+
+span.nextDays {
+  font-weight: bold;
+  text-align: center;
+  font-size: 50px;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+}
+
+.fa-gratipay {
+  color: red;
+}
